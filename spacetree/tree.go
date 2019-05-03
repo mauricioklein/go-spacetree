@@ -32,7 +32,7 @@ func newTree(lines []line) *Node {
 		}
 
 		// Add the new node to the tree
-		stk.Peek().(*Node).AddChild(node)
+		stk.Peek().(*Node).addChild(node)
 
 		// Update the last node
 		lastNode = node

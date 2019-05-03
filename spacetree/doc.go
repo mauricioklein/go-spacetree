@@ -5,25 +5,25 @@ Basics:
 
 Spacetree generates a tree representation of indented content. For example:
 
-1
-	1.1
-	1.2
-2
-	2.1
+ 1
+   1.1
+   1.2
+ 2
+   2.1
 
 Would generate the tree:
 
-ROOT -
-			|
-			- 1 -
-			|		 |
-			|		 - 1.2
-			|		 |
-			|		 - 1.2
-			|
-			- 2 -
-					 |
-					 - 2.1
+ ROOT -
+       |
+        - 1 -
+       |     |
+       |      - 1.1
+       |     |
+       |      - 1.2
+       |
+        - 2 -
+             |
+              - 2.1
 
 Usage:
 

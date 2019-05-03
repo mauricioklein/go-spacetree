@@ -23,7 +23,7 @@ func newNode(value string) *Node {
 	}
 }
 
-// AddChild adds a child to the node
-func (n *Node) AddChild(child *Node) {
+// addChild adds a child to the node
+func (n *Node) addChild(child *Node) {
 	n.Children = append(n.Children, child)
 }
