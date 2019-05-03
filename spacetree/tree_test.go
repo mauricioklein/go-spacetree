@@ -8,9 +8,9 @@ import (
 
 func Test_newTree_OneLevelIndentation(t *testing.T) {
 	lines := []line{
-		line{Value: "1", Level: 0},
-		line{Value: "2", Level: 0},
-		line{Value: "3", Level: 0},
+		{Value: "1", Level: 0},
+		{Value: "2", Level: 0},
+		{Value: "3", Level: 0},
 	}
 
 	root := newTree(lines)
@@ -22,11 +22,11 @@ func Test_newTree_OneLevelIndentation(t *testing.T) {
 
 func Test_newTree_TwoLevelIndentation(t *testing.T) {
 	lines := []line{
-		line{Value: "1", Level: 0},
-		line{Value: "1.1", Level: 1},
-		line{Value: "1.2", Level: 1},
-		line{Value: "2", Level: 0},
-		line{Value: "2.1", Level: 1},
+		{Value: "1", Level: 0},
+		{Value: "1.1", Level: 1},
+		{Value: "1.2", Level: 1},
+		{Value: "2", Level: 0},
+		{Value: "2.1", Level: 1},
 	}
 
 	root := newTree(lines)
@@ -46,12 +46,12 @@ func Test_newTree_TwoLevelIndentation(t *testing.T) {
 
 func Test_newTree_MultiLevelIndentation(t *testing.T) {
 	lines := []line{
-		line{Value: "1", Level: 0},
-		line{Value: "1.1", Level: 1},
-		line{Value: "1.1.1", Level: 2},
-		line{Value: "2", Level: 0},
-		line{Value: "3", Level: 0},
-		line{Value: "3.1", Level: 1},
+		{Value: "1", Level: 0},
+		{Value: "1.1", Level: 1},
+		{Value: "1.1.1", Level: 2},
+		{Value: "2", Level: 0},
+		{Value: "3", Level: 0},
+		{Value: "3.1", Level: 1},
 	}
 
 	root := newTree(lines)
