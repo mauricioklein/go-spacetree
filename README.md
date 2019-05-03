@@ -43,6 +43,8 @@ $ go get -u github.com/mauricioklein/go-spacetree/spacetree
   root := spacetree.New(scanner, indentationSymbol)
 ```
 
+Runnable examples can be found [here](examples/).
+
 ## Tests
 
 ```bash
