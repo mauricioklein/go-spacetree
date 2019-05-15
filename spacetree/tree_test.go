@@ -13,7 +13,9 @@ func Test_newTree_OneLevelIndentation(t *testing.T) {
 		{Value: "3", Level: 0},
 	}
 
-	root := newTree(lines)
+	root, err := newTree(lines)
+
+	assert.NoError(t, err)
 
 	assert.Equal(t, root.Children[0], newNode("1"))
 	assert.Equal(t, root.Children[1], newNode("2"))
@@ -29,7 +31,10 @@ func Test_newTree_TwoLevelIndentation(t *testing.T) {
 		{Value: "2.1", Level: 1},
 	}
 
-	root := newTree(lines)
+	root, err := newTree(lines)
+
+	assert.NoError(t, err)
+
 	var n *Node
 
 	// Node "1"
@@ -54,7 +59,10 @@ func Test_newTree_MultiLevelIndentation(t *testing.T) {
 		{Value: "3.1", Level: 1},
 	}
 
-	root := newTree(lines)
+	root, err := newTree(lines)
+
+	assert.NoError(t, err)
+
 	var n *Node
 
 	// Node "1"
@@ -80,7 +88,23 @@ func Test_newTree_MultiLevelIndentation(t *testing.T) {
 func Test_newTree_Empty(t *testing.T) {
 	lines := []line{}
 
-	root := newTree(lines)
+	root, err := newTree(lines)
 
+	assert.NoError(t, err)
 	assert.Equal(t, root, newNode(""))
+}
+
+func Test_newTree_IndentationBroken(t *testing.T) {
+	lines := []line{
+		{Value: "1", Level: 0},
+		{Value: "1.1", Level: 1},
+		{Value: "1.2", Level: 1},
+		{Value: "2", Level: 0},
+		{Value: "2.1.1", Level: 2}, // Indentation broken here!
+	}
+
+	root, err := newTree(lines)
+
+	assert.Nil(t, root)
+	assert.Errorf(t, err, "indentation broken at line 4")
 }

@@ -31,7 +31,9 @@ Spacetree expects two attributes as input:
   - the content buffer (*bufio.Scanner), holding the indented content
   - the indentation symbol (string)
 
-The result is a *spacetree.Node representing the root of the tree.
+The result is:
+  - a *spacetree.Node, representing the root of the tree
+  - an error, set in case of a processing error (broken indentation, for example)
 
 Example:
 
@@ -40,6 +42,6 @@ Example:
 	scanner := [your *bufio.Scanner containing the indented content]
 	indentationSymbol := " " // single space
 
-	root := spacetree.New(scanner, indentationSymbol)
+	root, err := spacetree.New(scanner, indentationSymbol)
 */
 package spacetree
