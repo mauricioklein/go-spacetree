@@ -20,7 +20,7 @@ func main() {
 	scanner := bufio.NewScanner(file)
 	indentationSymbol := "  " // File is indented by two consecutive spaces
 
-	root := spacetree.New(scanner, indentationSymbol)
+	root, err := spacetree.New(scanner, indentationSymbol)
 
-	fmt.Printf("Root: %+v\n", root)
+	fmt.Printf("Root: %+v (error: %+v)\n", root, err)
 }

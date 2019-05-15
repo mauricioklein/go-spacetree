@@ -12,7 +12,9 @@ func Test_New(t *testing.T) {
 
 	defer closeFile()
 
-	root := New(scanner, indentationSymbol)
+	root, err := New(scanner, indentationSymbol)
+
+	assert.NoError(t, err)
 
 	assert.Equal(t, root, &Node{
 		Value: "",

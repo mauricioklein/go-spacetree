@@ -40,7 +40,7 @@ $ go get -u github.com/mauricioklein/go-spacetree/spacetree
 
   // Generate the tree
   // Returns a *spacetree.Node, holding the tree's root node
-  root := spacetree.New(scanner, indentationSymbol)
+  root, err := spacetree.New(scanner, indentationSymbol)
 ```
 
 Runnable examples can be found [here](examples/).
