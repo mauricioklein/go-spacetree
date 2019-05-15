@@ -1,6 +1,7 @@
 # Space Tree
 
 [![Build Status](https://travis-ci.org/mauricioklein/go-spacetree.svg?branch=master)](https://travis-ci.org/mauricioklein/go-spacetree)
+![GitHub release](https://img.shields.io/github/release/mauricioklein/go-spacetree.svg)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Maintainability](https://api.codeclimate.com/v1/badges/65187a309a09d5999bac/maintainability)](https://codeclimate.com/github/mauricioklein/go-spacetree/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/65187a309a09d5999bac/test_coverage)](https://codeclimate.com/github/mauricioklein/go-spacetree/test_coverage)
